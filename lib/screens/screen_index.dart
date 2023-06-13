@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:my_flutter_app/tabs/tab_person.dart';
 import 'package:my_flutter_app/tabs/tab_chat.dart';
 import 'package:my_flutter_app/tabs/tab_setting.dart';
@@ -18,14 +19,20 @@ class _IndexScreenState extends State<IndexScreen> {
 
   @override
   Widget build(BuildContext context) {
+    // 여기서 헤더와 푸터는 만들어졌고 body Component만 만들면 됨
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text("First App!"),
+      ),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
-        iconSize: 44,
+        iconSize: 30.0,
         selectedItemColor: Colors.blue,
         unselectedItemColor: Colors.grey,
         selectedLabelStyle: TextStyle(fontSize: 12),
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
+        enableFeedback: false,
         currentIndex: _currentIndex,
         onTap: (index) {
           setState(() {
@@ -33,10 +40,11 @@ class _IndexScreenState extends State<IndexScreen> {
           });
         },
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: ''),
           BottomNavigationBarItem(
-              icon: Icon(Icons.chat_bubble_outline_rounded), label: ''),
-          BottomNavigationBarItem(icon: Icon(Icons.settings), label: ''),
+              icon: Icon(CupertinoIcons.home), label: "person"),
+          BottomNavigationBarItem(
+              icon: Icon(CupertinoIcons.conversation_bubble), label: "chat"),
+          BottomNavigationBarItem(icon: Icon(Icons.settings), label: "setting"),
         ],
       ),
       body: tabs[_currentIndex],

@@ -8,10 +8,7 @@ class TabPerson extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
-      navigationBar: CupertinoNavigationBar(
-        automaticallyImplyLeading: false,
-        middle: Text("scroll title"),
-      ),
+      // touch scroll
       child: CupertinoScrollbar(
         thickness: 6.0,
         thicknessWhileDragging: 10.0,

@@ -19,7 +19,7 @@ class _IndexScreenState extends State<IndexScreen> {
   final List<String> tabTitle = ["home", "chat", "setting"];
   @override
   Widget build(BuildContext context) {
-    // 여기서 헤더와 푸터는 만들어졌고 body Component만 만들면 됨
+    // 여기서 헤더와 푸터는 만들어졌고body Component만 만들면 됨
     return Scaffold(
       appBar: AppBar(
         title: Text(tabTitle[_currentIndex]),

@@ -7,23 +7,36 @@ class TabPerson extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CupertinoPageScaffold(
-      // touch scroll
-      child: CupertinoScrollbar(
-        thickness: 6.0,
-        thicknessWhileDragging: 10.0,
-        radius: const Radius.circular(34.0),
-        radiusWhileDragging: Radius.zero,
-        child: ListView.builder(
-          itemCount: 120,
-          itemBuilder: (context, index) {
-            return Center(
-              child: Text('item $index',
-                  style: CupertinoTheme.of(context).textTheme.textStyle),
-            );
-          },
-        ),
-      ),
+    return Visibility(
+      // child: Container(
+      //   width: 50,
+      //   height: 50,
+      //   color: Colors.black87,
+      // ), // Box 생성
+      // Container or SizedBox
+      // 네모박스 넣을땐 Container
+
+      child: Image.asset('assets/test.png'), // image
+      // child: Icon(Icons.people), // icon
     );
+
+    //   // touch scroll
+    // return CupertinoPageScaffold(
+    //   child: CupertinoScrollbar(
+    //     thickness: 6.0,
+    //     thicknessWhileDragging: 10.0,
+    //     radius: const Radius.circular(34.0),
+    //     radiusWhileDragging: Radius.zero,
+    //     child: ListView.builder(
+    //       itemCount: 120,
+    //       itemBuilder: (context, index) {
+    //         return Center(
+    //           child: Text('item $index',
+    //               style: CupertinoTheme.of(context).textTheme.textStyle),
+    //         );
+    //       },
+    //     ),
+    //   ),
+    // );
   }
 }

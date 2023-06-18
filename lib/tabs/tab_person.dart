@@ -7,17 +7,38 @@ class TabPerson extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Visibility(
-      // child: Container(
-      //   width: 50,
-      //   height: 50,
-      //   color: Colors.black87,
-      // ), // Box 생성
-      // Container or SizedBox
-      // 네모박스 넣을땐 Container
+    // 커스텀 디인 = MaterialApp 써야됨
+    // return Visibility(
+    //   // child: Container(
+    //   //   width: 50,
+    //   //   height: 50,
+    //   //   color: Colors.black87,
+    //   // ), // Box 생성
+    //   // Container or SizedBox
+    //   // 네모박스 넣을땐 Container
 
-      child: Image.asset('assets/test.png'), // image
-      // child: Icon(Icons.people), // icon
+    //   child: Image.asset('assets/test.png'), // image
+    //   // child: Icon(Icons.people), // icon
+    // );
+
+    return CupertinoApp(
+      // Scaffold = 헤더 바디 푸터로 디자인 영역 나눔
+      home: Scaffold(
+        // appBar: AppBar(),
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center, // 메인 정렬(display:flex)비슷
+          crossAxisAlignment: CrossAxisAlignment.center, // 서브 정렬
+          children: [
+            Icon(Icons.star),
+            Icon(Icons.star),
+            Container(
+              child: Icon(Icons.person),
+              alignment: Alignment.centerLeft,
+            )
+          ],
+        ),
+        // bottomNavigationBar: BottomAppBar()
+      ),
     );
 
     //   // touch scroll

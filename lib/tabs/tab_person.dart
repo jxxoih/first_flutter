@@ -25,19 +25,19 @@ class TabPerson extends StatelessWidget {
       // Scaffold = 헤더 바디 푸터로 디자인 영역 나눔
       home: Scaffold(
         // appBar: AppBar(),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.center, // 메인 정렬(display:flex)비슷
-          crossAxisAlignment: CrossAxisAlignment.center, // 서브 정렬
-          children: [
-            Icon(Icons.star),
-            Icon(Icons.star),
-            Container(
-              child: Icon(Icons.person),
-              alignment: Alignment.centerLeft,
-            )
-          ],
+        body: Align(
+          alignment: Alignment.topCenter,
+          child: Container(
+            width: double.infinity,
+            height: 50,
+            // margin: EdgeInsets.fromLTRB(20, 20, 50, 50),
+            color: Colors.amber,
+            // box border 등등등
+            // decoration: BoxDecoration(
+            //     color: Colors.amber,
+            //     border: Border.all(color: Colors.black)),
+          ),
         ),
-        // bottomNavigationBar: BottomAppBar()
       ),
     );
 

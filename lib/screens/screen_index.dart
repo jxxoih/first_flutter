@@ -22,6 +22,8 @@ class _IndexScreenState extends State<IndexScreen> {
     // 여기서 헤더와 푸터는 만들어졌고, body Component만 만들면 됨
     return Scaffold(
       appBar: AppBar(
+        actions: [],
+        leading: Icon(Icons.menu),
         title: Text(tabTitle[_currentIndex]),
       ),
       bottomNavigationBar: BottomNavigationBar(

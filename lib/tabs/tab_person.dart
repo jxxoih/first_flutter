@@ -27,15 +27,12 @@ class TabPerson extends StatelessWidget {
         // appBar: AppBar(),
         body: Align(
           alignment: Alignment.topCenter,
-          child: Container(
-            width: double.infinity,
-            height: 50,
-            // margin: EdgeInsets.fromLTRB(20, 20, 50, 50),
-            color: Colors.amber,
-            // box border 등등등
-            // decoration: BoxDecoration(
-            //     color: Colors.amber,
-            //     border: Border.all(color: Colors.black)),
+          child: ElevatedButton(
+            child: Text('버튼'),
+            onPressed: () {}, // 이벤트
+            style: ElevatedButton.styleFrom(
+                primary: Colors.black, // background color
+                onPrimary: Colors.amber),
           ),
         ),
       ),

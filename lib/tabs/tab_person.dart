@@ -22,21 +22,44 @@ class TabPerson extends StatelessWidget {
     // );
 
     return CupertinoApp(
-      // Scaffold = 헤더 바디 푸터로 디자인 영역 나눔
-      home: Scaffold(
-        // appBar: AppBar(),
-        body: Align(
-          alignment: Alignment.topCenter,
-          child: ElevatedButton(
-            child: Text('버튼'),
-            onPressed: () {}, // 이벤트
-            style: ElevatedButton.styleFrom(
-                primary: Colors.black, // background color
-                onPrimary: Colors.amber),
+        // Scaffold = 헤더 바디 푸터로 디자인 영역 나눔
+        home: Scaffold(
+            body: Container(
+      height: 150,
+      padding: EdgeInsets.all(10),
+      child: Row(
+        children: [
+          Image.asset(
+            'assets/test.png',
+            width: 150,
+            height: 150,
           ),
-        ),
+          Expanded(
+            flex: 3,
+            child: Container(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "맥북 팔아요",
+                    style: TextStyle(fontSize: 16),
+                  ),
+                  Text("대명역"),
+                  Text("150만원"),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Icon(Icons.favorite),
+                      Text('4'),
+                    ],
+                  )
+                ],
+              ),
+            ),
+          )
+        ],
       ),
-    );
+    )));
 
     //   // touch scroll
     // return CupertinoPageScaffold(
